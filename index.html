@@ -9,5 +9,20 @@
       tag will appear on the page, just like this <strong>p</strong>
       tag and its contents.
       </p>
+      <div id="viz">
+     </div>
+     <script>
+         vlSpec =
+           {
+               "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+               "data": {"url": "../building_inventory.json"},
+               "mark": "circle",
+               "encoding": {
+                   "x": {"field": "Congress Dist", "type": "quantitative"},
+                   "y": {"field": "Square Footage", "type": "quantitative"}
+               }
+           };
+         vegaEmbed('#viz', vlSpec);
+     </script>
   </body>
 </html>
